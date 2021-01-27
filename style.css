@@ -4,7 +4,7 @@ body {
 }
 h1 {
     text-align: center;
-    font-size: 40pt;
+    font-size: 44pt;
     font-weight: bold;
     padding: 100ox;
     margin: 80px;
@@ -15,7 +15,7 @@ h1 {
     align-content: center;
     background-color: steelblue;
     border:steelblue;
-
+    font-size: 16pt;
 }
 
 
@@ -28,6 +28,7 @@ h1 {
 .card-header {
     background: steelblue;
     color:white;
+    font-size: 20pt;
 }
 
 h2 {
@@ -35,52 +36,54 @@ h2 {
     color: white;
     font-weight: bold;
     padding: 30px;
+    font-size: 32pt;
+}
+
+h5 {
+    font-size: 24pt;
+    color: steelblue;
 }
 
 #timer {
-    border: solid;
-    border: steelblue;
+    border: 2px dashed steelblue;
     border-radius: 12pt;
     display: block;
     width: 100%;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    font-size: 1.2rem;
+    padding: 15px;
+    font-size: 16pt;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 2px dashed #c0c7cf;
     border-radius: 6px;
 
 }
 #highScore {
-    border: solid;
-    border: steelblue;
+    border: 2px dashed steelblue;
     border-radius: 12pt;
     display: block;
     width: 100%;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    font-size: 1.2rem;
+    padding: 15px;
+    font-size: 16pt;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 2px dashed #c0c7cf;
     border-radius: 6px;
 
 }
 
 #rightAnswer {
-    background-color: white;
-    font: steelblue;
+    color: steelblue;
+    align-content: center;
+    text-align: center;
+    font-weight: bold;
     border-color: steelblue;
-    border-style: dotted;
-    border-width: thick;
-    border-radius: 6 px;
+    border-style: dashed;
+    border-width: medium;
+    border-radius: 14 px;
     width: 100%;
     padding: 15px;
+    margin: 15px;
+    margin-right: 30px;
+
+    font-size: 20pt;
 }

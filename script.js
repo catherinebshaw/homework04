@@ -11,7 +11,7 @@ var questions = [
     correct:  "Maybe"},
   { question: "In the CSS declaration 'color:blue', color is the property and what is the blue?",
     answers: [ "color", "value", "element" ],
-    correct: "value"},
+    correct: "Value"},
 ]
 
 function showNextQuestion(){
@@ -22,27 +22,22 @@ function showNextQuestion(){
   //loop through three questions//
   for( var i=0; i < question.answers.length; i++ ){
     var answer = question.answers[i]
-    questionEl.innerHTML += `<button onClick="selectAnswer(event,'${answer}')" class="btn btn-secondary">${answer}</button>`
+    questionEl.innerHTML += `<button onClick="selectAnswer(event,'${answer}')" class="btn btn-secondary mx-2">${answer}</button>`
   }
 }
 
-function selectAnswer( event,answer ){
+function selectAnswer( event, answer ){
   event.preventDefault()
+  var correct = questions[questionNum].correct
+  
   console.log( `question answer id: ${answer}`)
   if( answer===questions[questionNum].correct ){
-    console.log( `correct answer: ${answer}`)
+    console.log( `correct answer: ${answer}`);
+    document.querySelector('#rightAnswer').innerHTML= `${correct} is the RIGHT ANSWER. Way to go!`
   } else {
-    console.log(`incorrect answer, -10`)
-    timerDecreaseAndDisplay(10)
-    displayAnswer()
-  }
-  //push correct answer to screen//
-  // var answerEl = document.querySelector('#answerBox')
-  // answerEl.innerHTML = `${question.answer}`
-  
-  function displayAnswer() {
-    document.querySelector('#answerResonse').textContent = `"${answer}"`
-
+    console.log(`incorrect answer, -10`);
+    document.querySelector('#rightAnswer').innerHTML= `${correct} is the right answer. Drop 10 seconds`
+    timerDecreaseAndDisplay(10);
   }
 
   questionNum++
@@ -50,7 +45,6 @@ function selectAnswer( event,answer ){
     showNextQuestion()
   else
     finishQuiz()
-
 }
 
 function timerDecreaseAndDisplay( byValue=1 ){
@@ -72,8 +66,6 @@ function finishQuiz(event){
   console.log( "finished" )
   clearInterval ( countdownTimer )
   // showPage( 'scorePage' )
- 
-  
 }
 
 //Start - click begin quiz 
@@ -89,5 +81,4 @@ function startQuiz(){
   showNextQuestion()   
 }
 
-  startQuiz()
-
+startQuiz()
