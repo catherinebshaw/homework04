@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Timed Code Quiz - HW 4</title>
+</head>
+<body>
+  <div class="container">
+      <header>
+        <h1>Code Quiz
+        <!-- </br>
+        <button type="button" id="start" class="btn btn-primary btn-lg">Begin Quiz</button>
+        </h1> -->
+      </header>
+    <section>
+      <div class="container">
+        <div class="row"> 
+          <div class="col-2">
+            <div class="card">
+              <!--put the timer in here-->
+              <div class="card-header">
+                Timer
+              </div>
+              <div class="card-body">
+                <p class="card-text" id="timer"></p>
+              </div>
+            </div> 
+            <div class="card">
+              <!--put the highscore in here-->
+              <div class="card-header">
+                Highscore
+              </div>
+              <div class="card-body" id="scorePage" style="text-align:center">
+                <p class="card-text" id="highScore"></p>
+              </div>
+            </div> 
+          </div>
+          <div class="col-10">
+            <div class="card" id="questionPage" style="width: 100%">
+              <h2 class="card-title">Questions</h2>
+              <div class="card-body">
+                <h5 class="card-title" id="questionBox"></h5>
+                <!--Question inserted here-->
+              </div>
+              <ul class="list-group list-group-center">
+                <li class="list-group-item" id="answerBox"></li>
+                <!--answer options inserted here-->
+                <li class="list-group-item"id="rightAnswer"></l>
+                  <!--Correct answer inserted here-->
+              </ul>
+              <div class="card-body">
+                <button type="button" class="btn btn-primary mx-auto" id="finishQuiz">Finish Quiz</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </section>
+  </div>
+
+       
+  <script src="script.js"></script>
+    
+</body>
+</html>

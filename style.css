@@ -1,0 +1,86 @@
+body {
+    font-family: fantasy;
+    font-size: 14pt;
+}
+h1 {
+    text-align: center;
+    font-size: 40pt;
+    font-weight: bold;
+    padding: 100ox;
+    margin: 80px;
+    color: steelblue;
+
+}
+.btn{
+    align-content: center;
+    background-color: steelblue;
+    border:steelblue;
+
+}
+
+
+.header .btn {
+    width: 100%;
+    padding-right: 100pt;
+    padding-left: 100pt;
+
+}
+.card-header {
+    background: steelblue;
+    color:white;
+}
+
+h2 {
+    background-color:steelblue;
+    color: white;
+    font-weight: bold;
+    padding: 30px;
+}
+
+#timer {
+    border: solid;
+    border: steelblue;
+    border-radius: 12pt;
+    display: block;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px dashed #c0c7cf;
+    border-radius: 6px;
+
+}
+#highScore {
+    border: solid;
+    border: steelblue;
+    border-radius: 12pt;
+    display: block;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px dashed #c0c7cf;
+    border-radius: 6px;
+
+}
+
+#rightAnswer {
+    background-color: white;
+    font: steelblue;
+    border-color: steelblue;
+    border-style: dotted;
+    border-width: thick;
+    border-radius: 6 px;
+    width: 100%;
+    padding: 15px;
+}
