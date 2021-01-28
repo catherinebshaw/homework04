@@ -11,7 +11,7 @@ var questions = [
     correct:  "Maybe"},
   { question: "In the CSS declaration 'color:blue', color is the property and what is the blue?",
     answers: [ "color", "value", "element" ],
-    correct: "Value"},
+    correct: "value"},
 ]
 
 function showNextQuestion(){
@@ -29,22 +29,18 @@ function showNextQuestion(){
 function selectAnswer( event, answer ){
   event.preventDefault()
   var correct = questions[questionNum].correct
-  
   console.log( `question answer id: ${answer}`)
   if( answer===questions[questionNum].correct ){
     console.log( `correct answer: ${answer}`);
     document.querySelector('#rightAnswer').innerHTML= `${correct} is the RIGHT ANSWER. Way to go!`
   } else {
     console.log(`incorrect answer, -10`);
-    document.querySelector('#rightAnswer').innerHTML= `${correct} is the right answer. Drop 10 seconds`
-    timerDecreaseAndDisplay(10);
+    document.querySelector('#rightAnswer').innerHTML= `Sorry, ${correct} is the right answer. Drop 10 seconds`
+      timerDecreaseAndDisplay(10);
   }
-
   questionNum++
   if( questionNum<questions.length )
     showNextQuestion()
-  else
-    finishQuiz()
 }
 
 function timerDecreaseAndDisplay( byValue=1 ){
@@ -55,18 +51,33 @@ function timerDecreaseAndDisplay( byValue=1 ){
     finishQuiz()
 }
 
-// function showPage( page ) {
-//   document.querySelector('#questionPage').classList.add('d-none')
-//   // document.querySelector('#scorePage').classList.add('d-none')
-//   document.querySelector(`#${page}`).classList.remove('d-none')
-// }
-
 function finishQuiz(event){
   if( event ) event.preventDefault()
   console.log( "finished" )
   clearInterval ( countdownTimer )
-  // showPage( 'scorePage' )
+  saveScore()
 }
+
+document.getElementById("finishQuiz").addEventListener("click", finishQuiz)
+
+
+
+//collect initials and high score from user to register score//
+function saveScore(){
+  var initials = prompt("please enter your initals for high score",);
+  var score = prompt("Please enter the time on the timer", ); 
+
+  //save in local storage//
+  localStorage.setItem("initials", JSON.stringify(initials));
+  localStorage.setItem("score", JSON.stringify(score));
+  //populate highscore in table 
+  document.querySelector("#initials").innerHTML = initials 
+  document.querySelector("#score").innerHTML = score
+  
+}
+ 
+
+
 
 //Start - click begin quiz 
 //starts the timer AND
@@ -75,10 +86,7 @@ function startQuiz(){
   questionNum = 0
   countdownValue = 60
   countdownTimer = setInterval( timerDecreaseAndDisplay, 1000 )
-  // showPage( 'quizPage')
-  // switch back to the quizPage
-  // showPage( 'questionBox')
   showNextQuestion()   
 }
 
-startQuiz()
+document.getElementById("start").addEventListener("click", startQuiz);

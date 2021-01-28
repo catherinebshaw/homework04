@@ -13,14 +13,14 @@
   <div class="container">
       <header>
         <h1>Code Quiz
-        <!-- </br>
+        </br>
         <button type="button" id="start" class="btn btn-primary btn-lg">Begin Quiz</button>
-        </h1> -->
+        </h1>
       </header>
     <section>
       <div class="container">
         <div class="row"> 
-          <div class="col-3">
+          <div class="col-4">
             <div class="card">
               <!--put the timer in here-->
               <div class="card-header">
@@ -35,12 +35,24 @@
               <div class="card-header">
                 Highscore
               </div>
-              <div class="card-body" id="scorePage" style="text-align:center">
-                <p class="card-text" id="highScore"></p>
+              <div class="card-body" style="text-align:center">
+                <table class="table" id="highScore" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th scope="col">Initals</th>
+                      <th scope="col">Score</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- <p class="card-text" id="highScore"></p> -->
+                    <td scope="col" id="initials" placeholder="JD"></td>
+                    <td scope="col" id="score"placeholder="25"></td>
+                  </tbody>
+                </table> 
               </div>
             </div> 
           </div>
-          <div class="col-9">
+          <div class="col-8">
             <div class="card" id="questionPage" style="width: 100%">
               <h2 class="card-title">Questions</h2>
               <div class="card-body">
