@@ -13,7 +13,7 @@ Just click the start button to begin. When the begin button is clicked, a timer 
 ![A three questions timed quiz to test your coding knowledge](https://github.com/catherinebshaw/homework04/blob/master/assets/Code_Quiz_CS.png)
 
 ## Live Site
-[Code Quiz]()
+[Code Quiz](https://catherinebshaw.github.io/homework04/)
 
 
 
